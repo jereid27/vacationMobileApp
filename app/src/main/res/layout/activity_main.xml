@@ -16,8 +16,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.135"
-        app:srcCompat="@android:drawable/ic_dialog_map"/>
+        app:layout_constraintVertical_bias="0.187"
+        app:srcCompat="@android:drawable/ic_dialog_map" />
 
     <TextView
         android:id="@+id/textView"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintVertical_bias="0.192" />
 
     <Button
         android:id="@+id/button"
@@ -46,6 +46,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintVertical_bias="0.321" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
