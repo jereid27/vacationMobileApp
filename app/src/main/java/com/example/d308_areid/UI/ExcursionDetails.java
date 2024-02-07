@@ -112,7 +112,7 @@ public class ExcursionDetails extends AppCompatActivity {
 
                 Date date;
                 String info = editDate.getText().toString();
-                if (info.equals("")) info = "02/01/24";
+                if (info.equals("")) info = "02/07/24";
                 try {
                     myCalendarStart.setTime(sdf.parse(info));
                 } catch (ParseException e) {
@@ -130,7 +130,21 @@ public class ExcursionDetails extends AppCompatActivity {
             public void onClick(View view) {
                 Excursions excursions;
 
-                if (isDateInRange(checkExcursionDateObj, startDateThing, endDateThing)) {
+                String eDate = editDate.getText().toString();
+
+                Date eObj;
+                Date startDateObj;
+                Date endDateObj;
+
+                try {
+                    eObj = sdf.parse(eDate);
+                    startDateObj = sdf.parse(startDateThing);
+                    endDateObj = sdf.parse(endDateThing);
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
+
+                if (eObj != null && startDateObj != null && endDateObj != null && eObj.compareTo(startDateObj) >= 0 && eObj.compareTo(endDateObj) <= 0) {
                     if (excursionID == -1) {
                         if (repository.getmAllExcursions().size() == 0) {
                             excursionID = 1;
@@ -156,7 +170,7 @@ public class ExcursionDetails extends AppCompatActivity {
                     }
                     finish();
                 } else {
-                    Toast.makeText(ExcursionDetails.this, "Date must be within the vacation dates.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ExcursionDetails.this,"Date must be within the Vacation Dates", Toast.LENGTH_LONG).show();
                 }
             }
         });

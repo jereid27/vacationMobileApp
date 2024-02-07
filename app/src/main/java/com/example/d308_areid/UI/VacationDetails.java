@@ -146,7 +146,7 @@ public class VacationDetails  extends AppCompatActivity {
                 Date date;
                 //get value from other screen,but I'm going to hard code it right now
                 String info=editEndDate.getText().toString();
-                if(info.equals(""))info="02/01/24";
+                if(info.equals(""))info="02/07/24";
                 try{
                     myCalendarEnd.setTime(sdf.parse(info));
                 } catch (ParseException e) {
