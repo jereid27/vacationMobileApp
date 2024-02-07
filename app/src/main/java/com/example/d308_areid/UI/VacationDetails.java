@@ -50,20 +50,30 @@ public class VacationDetails  extends AppCompatActivity {
         setContentView(R.layout.activity_vacation_details);
         repository = new Repository(getApplication());
 
+        //Including the details required for each vacation:
+
+        //Finding each view by ID
         editName = findViewById(R.id.vacationTitleText);
         editHotel = findViewById(R.id.hoteltext);
         editStartDate = findViewById(R.id.startdate);
         editEndDate = findViewById(R.id.enddate);
 
-        name = getIntent().getStringExtra("name");
-        editName.setText(name);
-        hotel = getIntent().getStringExtra("hotel");
-        editHotel.setText(hotel);
+
+        //Getting each intent and setting the text
+
         vacationID = getIntent().getIntExtra("id", -1);
+
         startDateThing = getIntent().getStringExtra("startDate");
         editStartDate.setText(startDateThing);
+
         endDateThing = getIntent().getStringExtra("endDate");
         editEndDate.setText(endDateThing);
+
+        name = getIntent().getStringExtra("name");
+        editName.setText(name);
+
+        hotel = getIntent().getStringExtra("hotel");
+        editHotel.setText(hotel);
 
         String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
