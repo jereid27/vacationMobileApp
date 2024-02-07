@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#332F2F">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="425dp"
+        android:layout_height="372dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#595454"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/backtovacationlist"
+                    android:layout_width="56dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="#00BDABAB"
+                    android:contentDescription="backbutton"
+                    app:layout_constraintBaseline_toTopOf="@+id/vacationrecyclerview"
+                    app:layout_constraintEnd_toStartOf="@+id/vacationlisttext"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_revert"
+                    tools:layout_editor_absoluteY="13dp" />
+
+                <TextView
+                    android:id="@+id/vacationDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25sp"
+                    android:layout_marginTop="5sp"
+                    android:text="Vacation Details"
+                    android:textColor="#FFFFFF"
+                    android:textSize="27sp"
+                    android:typeface="serif" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:text="Vacation Title:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp">
+
+                </TextView>
+                />
+
+                <EditText
+                    android:id="@+id/vacationTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="title">
+
+                </EditText>
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:text="Hotel:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp">
+
+                </TextView>
+                />
+
+                <EditText
+                    android:id="@+id/hoteltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="hotel">
+
+                </EditText>
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:text="Start Date:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp">
+
+                </TextView>
+                />
+
+                <TextView
+                    android:id="@+id/startdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="MM/dd/yy">
+
+                </TextView>
+                />
+                <Button
+                    android:id="@+id/notifyStartButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="69dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#332F2F"
+                    android:text="Notify Start" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:text="End Date:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp">
+
+                </TextView>
+                />
+
+                <TextView
+                    android:id="@+id/enddate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="MM/dd/yy">
+
+                </TextView>
+                />
+                <Button
+                    android:id="@+id/notifyEndButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="77dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#332F2F"
+                    android:text="Notify End" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="45dp">
+
+                <Button
+                    android:id="@+id/saveVacationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#332F2F"
+                    android:text="Save"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/deleteVacationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#332F2F"
+                    android:text="Delete" />
+
+                <Button
+                    android:id="@+id/shareVacationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#332F2F"
+                    android:text="Share" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/excursionrecyclerview"
+        android:layout_width="404dp"
+        android:layout_height="301dp"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="15sp"
+        android:paddingTop="15sp"
+        android:paddingRight="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+    <Button
+        android:id="@+id/newExcursionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="432dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#595454"
+        android:text="New Excursion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Associated Excursions"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toTopOf="@+id/excursionrecyclerview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
