@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#332F2F"
+    tools:context=".UI.VacationList">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vacationrecyclerview"
+        android:layout_width="326dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="75dp"
+        android:paddingLeft="10sp"
+        android:paddingTop="10sp"
+        android:paddingRight="10sp"
+        android:paddingBottom="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vacationlisttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vacation List"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <Button
+        android:id="@+id/newVacationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#636060"
+        android:text="New Vacation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+    <ImageButton
+        android:id="@+id/backtomenu"
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#00BDABAB"
+        app:layout_constraintEnd_toStartOf="@+id/vacationlisttext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:layout_editor_absoluteY="13dp"
+        app:layout_constraintBaseline_toTopOf="@+id/vacationrecyclerview"
+        android:contentDescription="backbutton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
