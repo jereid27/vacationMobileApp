@@ -110,6 +110,10 @@ public class Repository {
             throw new RuntimeException(e);
         }
 
+        if (mAllExcursions == null || mAllExcursions.isEmpty()) {
+            Log.d("Repository", "No excursions found for vacationID: " + vacationID);
+        }
+
         return mAllExcursions;
     }
 
